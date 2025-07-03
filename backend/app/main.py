@@ -32,6 +32,10 @@ def get_db():
 def read_root():
     return {"message": "Welcome to Soundverse AI DNA Page. The backend is running."}
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 @app.get("/artists", response_model=list[schemas.DNAArtistResponse])
 def read_artists(db: Session = Depends(get_db)):
     return crud.get_artists(db)
