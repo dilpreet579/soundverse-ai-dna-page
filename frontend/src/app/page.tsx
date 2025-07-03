@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen bg-black">
       <div className="flex bg-[#121212] text-white">
         <Sidebar />
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full ml-15">
           <TopSection />
           <div className="flex flex-col gap-8 p-4 sm:p-8">
             <CTACard

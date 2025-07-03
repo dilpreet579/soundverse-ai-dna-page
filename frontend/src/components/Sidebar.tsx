@@ -14,14 +14,14 @@ export default function Sidebar() {
   return (
     <aside className="fixed top-0 left-0 z-30 flex flex-col items-center py-6 px-2 bg-black min-h-screen">
       {/* Logo */}
-      <Image src="/logo.svg" alt="Logo" width={32} height={32} />
+      <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
 
       {/* Navigation */}
       <div className="flex flex-col gap-8 mt-8">
         {navItems.map((item, idx) => (
           <SidebarIcon key={idx} src={item.src} alt={item.alt} label={item.label} />
         ))}
-        <button className="bg-[#121212] text-white text-xs font-bold px-2 py-2 rounded-xl hover:bg-gray-700 transition mt-auto mb-4">
+        <button className="bg-[#121212] text-white text-xs font-bold px-2 py-2 rounded-xl hover:bg-gray-700 transition mt-auto mb-4" onClick={() => window.location.href = "/"}>
           DNA
         </button>
       </div>

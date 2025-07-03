@@ -36,16 +36,16 @@ export default function Step3ProfileCreation() {
   }
 
   return (
-    <section className="px-6 md:px-12 py-12" id="step-3">
+    <section className="px-6 md:px-12 py-6" id="step-3">
       <h2 className="text-white text-sm mb-2">Step 3</h2>
-      <h1 className="text-white text-2xl font-semibold mb-6">Profile Creation</h1>
+      <h1 className="text-white text-2xl font-semibold mb-6" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Profile Creation</h1>
       <div className="rounded-2xl bg-[#1A1A1A] p-6 md:p-10 border border-[#2A2A2A] text-white max-w-7xl flex flex-col gap-10">
         <div className="flex flex-col sm:flex-row gap-10">
           {/* Left - Form */}
         <div className="flex-1 space-y-4 text-sm">
           {/* Creator Name */}
           <div>
-            <label className="block mb-1">Creator Name</label>
+            <label className="block mb-1" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Creator Name</label>
             <input
               type="text"
               placeholder="Name such as Skrillex, Coldplay"
@@ -57,7 +57,7 @@ export default function Step3ProfileCreation() {
 
           {/* Description */}
           <div>
-            <label className="block mb-1">Description</label>
+            <label className="block mb-1" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Description</label>
             <textarea
               placeholder="Up to 300 characters"
               value={description}
@@ -69,7 +69,7 @@ export default function Step3ProfileCreation() {
 
           {/* Tags */}
           <div>
-            <label className="block mb-1">Tags</label>
+            <label className="block mb-1" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Tags</label>
             <div className="flex items-center gap-2 mb-2">
               <input
                 type="text"
@@ -109,7 +109,7 @@ export default function Step3ProfileCreation() {
             { label: 'Become Partner', key: 'partner', options: ['Yes', 'No'] },
           ].map(({ label, key, options }) => (
             <div key={key}>
-              <label className="block mb-1">{label}</label>
+              <label className="block mb-1" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>{label}</label>
               <select
                 value={form[key as keyof typeof form]}
                 onChange={(e) =>

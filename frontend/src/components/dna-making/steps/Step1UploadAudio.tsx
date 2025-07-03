@@ -19,9 +19,9 @@ export default function Step1UploadAudio() {
   }
 
   return (
-    <section className="px-6 md:px-12 py-12" id="step-1">
+    <section className="px-6 md:px-12 py-6" id="step-1">
       <h2 className="text-white text-sm mb-2">Step 1</h2>
-      <h1 className="text-white text-2xl font-semibold mb-6">Upload Audio</h1>
+      <h1 className="text-white text-2xl font-semibold mb-6" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Upload Audio</h1>
 
       <div className="rounded-2xl bg-[#1A1A1A] p-8 md:p-12 border border-[#2A2A2A] text-center max-w-3xl">
         {/* Upload Icon */}

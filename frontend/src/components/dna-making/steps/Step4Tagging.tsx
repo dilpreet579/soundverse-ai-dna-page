@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 export default function Step4Tagging() {
   return (
-    <section className="px-6 md:px-12 py-20 text-white" id="step-4">
+    <section className="px-6 md:px-12 py-6 text-white" id="step-4">
       <h2 className="text-sm mb-2 text-gray-400">Step 4</h2>
-      <h1 className="text-2xl font-semibold mb-12">Tagging and Categorization</h1>
+      <h1 className="text-2xl font-semibold mb-12" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Tagging and Categorization</h1>
 
       <div className="flex flex-col items-center justify-center">
         {/* Animated Glow + Circle */}
@@ -24,11 +24,11 @@ export default function Step4Tagging() {
           />
 
           {/* Center Text */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 font-bold text-center leading-tight z-20" style={{ fontFamily: 'Power Grotesk', fontWeight: 'bold' }}>
-            <p className="text-2xl sm:text-5xl">WE'RE</p>
-            <p className="text-2xl sm:text-5xl">BUILDING</p>
-            <p className="text-2xl sm:text-5xl">YOUR</p>
-            <p className="text-2xl sm:text-5xl font-bold">DNA</p>
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 font-bold text-center leading-tight z-7" style={{ fontFamily: 'Power Grotesk', fontWeight: 'bold' }}>
+            <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">WE'RE</span>
+            <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">BUILDING</span>
+            <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">YOUR</span>
+            <span className="block text-2xl sm:text-5xl font-bold tracking-tight leading-none m-0">DNA</span>
           </div>
         </div>
 

@@ -28,19 +28,19 @@ export default function Home() {
                 <div className="flex flex-col w-full ml-15">
                     <TopSection2 onStepClick={scrollToStep} />
                     <div className="flex flex-col gap-8 p-4 sm:p-8">
-                        <div ref={step1Ref} className="scroll-mt-40">
+                        <div ref={step1Ref} className="scroll-mt-45">
                             <Step1UploadAudio />
                         </div>
-                        <div ref={step2Ref} className="scroll-mt-40">
+                        <div ref={step2Ref} className="scroll-mt-45">
                             <Step2DnaSensitivity />
                         </div>
-                        <div ref={step3Ref} className="scroll-mt-40">
+                        <div ref={step3Ref} className="scroll-mt-45">
                             <Step3ProfileCreation />
                         </div>
-                        <div ref={step4Ref} className="scroll-mt-40">
+                        <div ref={step4Ref} className="scroll-mt-45">
                             <Step4Tagging />
                         </div>
-                        <div ref={step5Ref} className="scroll-mt-40">
+                        <div ref={step5Ref} className="scroll-mt-45">
                             <Step5Publish />
                         </div>
                     </div>

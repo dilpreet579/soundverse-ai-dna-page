@@ -4,13 +4,13 @@ import Image from 'next/image'
 
 export default function TopSection() {
     return (
-        <div className="relative flex flex-1 items-center justify-between px-10 sm:px-20 py-10 sm:py-15" style={{
+        <div className="relative flex flex-1 items-center justify-between px-10 sm:px-20 py-10 sm:py-15 sticky top-0 z-10" style={{
             backgroundImage: 'linear-gradient(to left, #121212 5%, #1E2B3A 95%, #232323 100%)',
           }}>
             {/* Avatar at top right */}
             <div className="absolute top-6 right-10 md:top-8 md:right-20 z-10">
                 <Image
-                    src="/avatar.png"
+                    src="/images/avatar.png"
                     alt="User avatar"
                     width={40}
                     height={40}

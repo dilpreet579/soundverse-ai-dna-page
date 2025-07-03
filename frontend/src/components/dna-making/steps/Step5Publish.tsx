@@ -9,7 +9,7 @@ export default function Step5Publish() {
     creatorName: 'Your Name',
     description: 'Your DNA description goes here.',
     tags: ['pop', 'upbeat', '2025'],
-    imageUrl: '/public/avatar.png',
+    imageUrl: '/images/avatar.png',
   };
 
   const [published, setPublished] = useState(false);
@@ -67,9 +67,9 @@ export default function Step5Publish() {
   }, []);
 
   return (
-    <section className="px-6 md:px-12 py-12" id="step-5">
+    <section className="px-6 md:px-12 py-6" id="step-5">
       <h2 className="text-white text-sm mb-2">Step 5</h2>
-      <h1 className="text-white text-2xl font-semibold mb-6">Publish & Suggested DNA Artists</h1>
+      <h1 className="text-white text-2xl font-semibold mb-6" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>Publish & Suggested DNA Artists</h1>
 
       {/* Profile Summary Card */}
       <div className="mb-10 max-w-xl mx-auto bg-[#191919] border border-[#333] rounded-2xl p-6 flex flex-col items-center gap-4 shadow">
