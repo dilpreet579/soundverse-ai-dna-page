@@ -40,8 +40,9 @@ export default function Step3ProfileCreation() {
       <h2 className="text-white text-sm mb-2">Step 3</h2>
       <h1 className="text-white text-2xl font-semibold mb-6">Profile Creation</h1>
 
-      <div className="rounded-2xl bg-[#1A1A1A] p-6 md:p-10 border border-[#2A2A2A] text-white max-w-5xl mx-auto flex flex-col md:flex-row gap-10">
-        {/* Left - Form */}
+      <div className="rounded-2xl bg-[#1A1A1A] p-6 md:p-10 border border-[#2A2A2A] text-white max-w-5xl flex flex-col gap-10">
+        <div className="flex flex-col sm:flex-row gap-10">
+          {/* Left - Form */}
         <div className="flex-1 space-y-4 text-sm">
           {/* Creator Name */}
           <div>
@@ -154,17 +155,19 @@ export default function Step3ProfileCreation() {
             Upload Picture
           </label>
         </div>
-      </div>
-
-      {/* Done Button */}
-      <div className="flex justify-center mt-10">
+        </div>
+        {/* Done Button */}
+      <div className="flex justify-center">
         <button
           onClick={handleDone}
-          className="bg-green-600 hover:bg-green-700 transition px-10 py-3 rounded-full font-medium text-white text-sm"
+          className="bg-[#007D49] hover:bg-[green-800] transition px-10 py-3 rounded-full font-medium text-white text-sm cursor-pointer"
         >
           Done
         </button>
       </div>
+      </div>
+
+      
     </section>
   )
 }

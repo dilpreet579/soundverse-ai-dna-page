@@ -52,7 +52,7 @@ export default function Step2DnaSensitivity() {
         {/* Buttons */}
         <div className="flex gap-6 justify-center mt-8 flex-wrap">
           <button
-            className="bg-green-700 hover:bg-green-800 transition px-6 py-2 rounded-full font-medium text-white text-sm"
+            className="bg-[#007D49] hover:bg-[green-800] transition px-6 py-2 rounded-full font-medium text-white text-sm cursor-pointer"
             onClick={() => console.log('Sensitivity level:', sensitivity)}
           >
             Set Sensitivity

@@ -50,7 +50,7 @@ export default function TopSection2({ onStepClick }: TopSection2Props) {
                                 onStepClick(idx + 1)
                             }}
                             className={`px-6 py-2 rounded-full text-sm transition-all duration-200 ${isActive
-                                    ? 'bg-green-700 text-white'
+                                    ? 'bg-[#007D49] text-white'
                                     : 'bg-[#1A1A1A] text-gray-300 shadow-md'
                                 }`}
                         >
