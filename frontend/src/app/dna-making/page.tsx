@@ -6,6 +6,7 @@ import Sidebar from '@/components/Sidebar'
 import Step1UploadAudio from '@/components/dna-making/steps/Step1UploadAudio'
 import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivity'
 import Step3ProfileCreation from '@/components/dna-making/steps/Step3ProfileCreation';
+import Step4Tagging from '@/components/dna-making/steps/Step4Tagging';
 import { useRef } from 'react'
 
 export default function Home() {
@@ -34,6 +35,9 @@ export default function Home() {
                         </div>
                         <div ref={step3Ref} className="scroll-mt-40">
                             <Step3ProfileCreation />
+                        </div>
+                        <div ref={step4Ref} className="scroll-mt-40">
+                            <Step4Tagging />
                         </div>
                     </div>
                 </div>
