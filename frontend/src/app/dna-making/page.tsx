@@ -23,12 +23,12 @@ export default function Home() {
             <div className="flex bg-[#121212] text-white">
                 <Sidebar />
                 <div className="flex flex-col w-full ml-15">
-                    <TopSection2 />
+                    <TopSection2 onStepClick={scrollToStep} />
                     <div className="flex flex-col gap-8 p-4 sm:p-8">
-                        <div ref={step1Ref}>
+                        <div ref={step1Ref} className="scroll-mt-40">
                             <Step1UploadAudio />
                         </div>
-                        <div ref={step2Ref}>
+                        <div ref={step2Ref} className="scroll-mt-40">
                             <Step2DnaSensitivity />
                         </div>
                     </div>

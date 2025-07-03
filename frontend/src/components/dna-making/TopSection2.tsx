@@ -3,6 +3,10 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+type TopSection2Props = {
+    onStepClick: (step: number) => void
+}
+
 const steps = [
     'Step 1: Upload Audio',
     'Step 2: DNA Sensitivity',
@@ -11,7 +15,7 @@ const steps = [
     'Publish',
 ]
 
-export default function TopSection2() {
+export default function TopSection2({ onStepClick }: TopSection2Props) {
     const [activeStep, setActiveStep] = useState(1)
     return (
         <div className="relative flex flex-col justify-between px-10 sm:px-20 py-5 sm:py-9 sticky top-0 z-10" style={{
@@ -41,7 +45,10 @@ export default function TopSection2() {
                     return (
                         <button
                             key={step}
-                            onClick={() => setActiveStep(idx + 1)}
+                            onClick={() => {
+                                setActiveStep(idx + 1)
+                                onStepClick(idx + 1)
+                            }}
                             className={`px-6 py-2 rounded-full text-sm transition-all duration-200 ${isActive
                                     ? 'bg-green-700 text-white'
                                     : 'bg-[#1A1A1A] text-gray-300 shadow-md'
