@@ -14,7 +14,7 @@ const steps = [
 export default function TopSection2() {
     const [activeStep, setActiveStep] = useState(1)
     return (
-        <div className="relative flex flex-col justify-between px-10 sm:px-20 py-10 sm:py-15" style={{
+        <div className="relative flex flex-col justify-between px-10 sm:px-20 py-5 sm:py-9 sticky top-0 z-10" style={{
             backgroundImage: 'linear-gradient(to left, #121212 5%, #1E2B3A 95%, #232323 100%)',
         }}>
             {/* Avatar at top right */}
@@ -35,7 +35,7 @@ export default function TopSection2() {
                     You can upload your music, and build your DNA.
                 </p>
             </div>
-            <div className="flex gap-4 mt-6 flex-wrap">
+            <div className="flex gap-4 mt-4 flex-wrap">
                 {steps.map((step, idx) => {
                     const isActive = idx + 1 === activeStep
                     return (

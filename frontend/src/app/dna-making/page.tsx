@@ -1,36 +1,35 @@
+'use client'
+
 import TopSection2 from '@/components/dna-making/TopSection2'
 import CTACard from '@/components/CTACard'
 import Sidebar from '@/components/Sidebar'
+import Step1UploadAudio from '@/components/dna-making/steps/Step1UploadAudio'
+import { useRef } from 'react'
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-black">
-      <div className="flex bg-[#121212] text-white">
-        <Sidebar />
-        <div className="flex flex-col w-full">
-          <TopSection2 />
-          <div className="flex flex-col gap-8 p-4 sm:p-8">
-            <CTACard
-              title="Verify your creator identity → Unlock your DNA"
-              description="Simply claim your profile, and we'll build your DNA automatically. Are you a creator with music already on Spotify, Youtube etc?"
-              buttons={[
-                { label: 'Claim your profile', href: '/dna-making', variant: 'primary' },
-                { label: "This doesn't apply to me", href: '/dna-making', variant: 'secondary' },
-              ]}
-            />
+    const step1Ref = useRef<HTMLDivElement>(null)
+    const step2Ref = useRef<HTMLDivElement>(null)
+    const step3Ref = useRef<HTMLDivElement>(null)
+    const step4Ref = useRef<HTMLDivElement>(null)
+    const step5Ref = useRef<HTMLDivElement>(null)
 
-            <CTACard
-              title="Build DNA by Uploading Audio Tracks"
-              description="You can upload your music, and build your Sonic DNA. Please note that by default all DNAs remain private."
-              listItems={[
-                'Build with AI: With this, AI will take care of captions, categorisations, tags.',
-                'Build Manually: You’ll have to manually add captions, categorisations and tags.',
-              ]}
-              buttons={[{ label: 'Upload audio', href: '/dna-making', variant: 'primary' }]}
-            />
-          </div>
-        </div>
-      </div>
-    </main>
-  )
+    const scrollToStep = (step: number) => {
+        const stepRefs = [step1Ref, step2Ref, step3Ref, step4Ref, step5Ref]
+        stepRefs[step - 1]?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    return (
+        <main className="min-h-screen bg-black">
+            <div className="flex bg-[#121212] text-white">
+                <Sidebar />
+                <div className="flex flex-col w-full ml-15">
+                    <TopSection2 />
+                    <div className="flex flex-col gap-8 p-4 sm:p-8">
+                        <div ref={step1Ref}>
+                            <Step1UploadAudio />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
 }
