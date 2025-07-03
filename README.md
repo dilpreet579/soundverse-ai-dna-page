@@ -70,7 +70,14 @@ This project features a modern multi-step creation flow, FastAPI backend, Postgr
     cd frontend
     npm install
     ```
-2. **Run dev server:**
+2. **Configure API URL:**
+    - Create a `.env` file in the `frontend` directory (or use `.env.example`).
+    - Set the backend API base URL:
+      ```env
+      NEXT_PUBLIC_API_URL=https://your-backend-url.onrender.com
+      ```
+    - This will be used in your frontend code for all API calls.
+3. **Run dev server:**
     ```bash
     npm run dev
     ```
@@ -82,6 +89,28 @@ This project features a modern multi-step creation flow, FastAPI backend, Postgr
 2. Complete each step: upload audio, set sensitivity, fill profile, tag, and publish.
 3. Preview suggested DNA artists and play audio with Howler.js.
 4. On Step 5, publish your DNA profile (API integration required for full publish).
+
+## Deployment
+
+### Frontend (Vercel)
+1. Push your code to GitHub.
+2. Go to [vercel.com](https://vercel.com/) and import your repo.
+3. Set the **Root Directory** to `frontend`.
+4. In Vercel dashboard, add the environment variable:
+    - `NEXT_PUBLIC_API_URL` set to your deployed backend URL (from Render)
+5. Deploy. Your site will be live at `https://your-vercel-project.vercel.app`.
+
+### Backend (Render)
+1. Push your code to GitHub.
+2. Go to [render.com](https://render.com/) and create a new **Web Service**.
+3. Set the **Root Directory** to `backend`.
+4. Build command: `pip install -r requirements.txt`
+5. Start command: `uvicorn app.main:app --host 0.0.0.0 --port 10000`
+6. Add environment variable `DATABASE_URL` with your Render PostgreSQL connection string.
+7. Deploy. Copy your backend URL for use in the frontend.
+
+### CORS
+- Make sure your backend CORS settings allow your Vercel domain.
 
 ## Tech Stack
 - **Frontend:** Next.js 14, React 18, Tailwind CSS, Howler.js, TypeScript

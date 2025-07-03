@@ -56,7 +56,7 @@ export default function Step5Publish() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:8000/artists')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/artists`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch DNA artists');
         return res.json();
