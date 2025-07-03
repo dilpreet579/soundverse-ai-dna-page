@@ -5,6 +5,7 @@ import CTACard from '@/components/CTACard'
 import Sidebar from '@/components/Sidebar'
 import Step1UploadAudio from '@/components/dna-making/steps/Step1UploadAudio'
 import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivity'
+import Step3ProfileCreation from '@/components/dna-making/steps/Step3ProfileCreation';
 import { useRef } from 'react'
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
                         </div>
                         <div ref={step2Ref} className="scroll-mt-40">
                             <Step2DnaSensitivity />
+                        </div>
+                        <div ref={step3Ref} className="scroll-mt-40">
+                            <Step3ProfileCreation />
                         </div>
                     </div>
                 </div>
