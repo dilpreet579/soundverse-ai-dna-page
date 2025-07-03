@@ -4,6 +4,7 @@ import TopSection2 from '@/components/dna-making/TopSection2'
 import CTACard from '@/components/CTACard'
 import Sidebar from '@/components/Sidebar'
 import Step1UploadAudio from '@/components/dna-making/steps/Step1UploadAudio'
+import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivity'
 import { useRef } from 'react'
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
                     <div className="flex flex-col gap-8 p-4 sm:p-8">
                         <div ref={step1Ref}>
                             <Step1UploadAudio />
+                        </div>
+                        <div ref={step2Ref}>
+                            <Step2DnaSensitivity />
                         </div>
                     </div>
                 </div>
