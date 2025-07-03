@@ -12,16 +12,16 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="flex flex-col items-center py-6 px-3 bg-black min-h-screen">
+    <aside className="flex flex-col items-center py-6 px-2 bg-black min-h-screen">
       {/* Logo */}
-      <Image src="/logo.svg" alt="Logo" width={40} height={40} />
+      <Image src="/logo.svg" alt="Logo" width={32} height={32} />
 
       {/* Navigation */}
       <div className="flex flex-col gap-8 mt-8">
         {navItems.map((item, idx) => (
           <SidebarIcon key={idx} src={item.src} alt={item.alt} label={item.label} />
         ))}
-        <button className="bg-[#121212] text-white text-xs font-bold px-4 py-2 rounded-xl hover:bg-gray-700 transition mt-auto mb-4">
+        <button className="bg-[#121212] text-white text-xs font-bold px-2 py-2 rounded-xl hover:bg-gray-700 transition mt-auto mb-4">
           DNA
         </button>
       </div>
@@ -38,7 +38,7 @@ function SidebarIcon({ src, alt, label }: { src: string; alt: string; label: str
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
-      <Image src={src} alt={alt} width={24} height={24} className="hover:opacity-80 transition" />
+      <Image src={src} alt={alt} width={20} height={20} className="hover:opacity-80 transition" />
 
       {/* Tooltip */}
       {showTooltip && (

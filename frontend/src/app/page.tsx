@@ -7,9 +7,9 @@ export default function Home() {
     <main className="min-h-screen bg-black">
       <div className="flex bg-[#121212] text-white">
         <Sidebar />
-        <div className="flex flex-col gap-8 w-full">
+        <div className="flex flex-col w-full">
           <TopSection />
-          <div className="flex flex-col gap-8 p-6 md:p-12">
+          <div className="flex flex-col gap-8 p-4 sm:p-8">
             <CTACard
               title="Verify your creator identity → Unlock your DNA"
               description="Simply claim your profile, and we'll build your DNA automatically. Are you a creator with music already on Spotify, Youtube etc?"

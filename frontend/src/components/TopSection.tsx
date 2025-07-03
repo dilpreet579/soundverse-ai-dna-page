@@ -4,9 +4,19 @@ import Image from 'next/image'
 
 export default function TopSection() {
     return (
-        <div className="flex flex-1 items-center justify-between px-10 md:px-20" style={{
+        <div className="relative flex flex-1 items-center justify-between px-10 sm:px-20 py-10 sm:py-15" style={{
             backgroundImage: 'linear-gradient(to left, #121212 5%, #1E2B3A 95%, #232323 100%)',
           }}>
+            {/* Avatar at top right */}
+            <div className="absolute top-6 right-10 md:top-8 md:right-20 z-10">
+                <Image
+                    src="/avatar.png"
+                    alt="User avatar"
+                    width={40}
+                    height={40}
+                    className="rounded-full shadow-lg"
+                />
+            </div>
             <div>
                 <h1 className="text-3xl md:text-5xl font-light font-grotesk" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>
                     BUILD <span className="font-bold font-grotesk   " style={{ fontFamily: 'Power Grotesk', fontWeight: 'bold' }}>DNA</span>
@@ -17,16 +27,6 @@ export default function TopSection() {
                 </p>
             </div>
 
-            {/* Avatar - always visible */}
-            <div>
-                <Image
-                    src="/avatar.png"
-                    alt="User avatar"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                />
-            </div>
         </div>
     )
 }
