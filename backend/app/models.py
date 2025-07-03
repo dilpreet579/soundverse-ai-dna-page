@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, ARRAY
 from .database import Base
 
 class DNAArtist(Base):
@@ -9,3 +9,4 @@ class DNAArtist(Base):
     genres = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)
     audio_preview_url = Column(String(255), nullable=True) 
+    tags = Column(ARRAY(String), nullable=True)

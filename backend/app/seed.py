@@ -7,40 +7,45 @@ def seed():
     db: Session = SessionLocal()
     artists = [
         DNAArtist(
-            name="Aether Bloom",
+            name="SonicBloom",
             image_url="https://images.unsplash.com/photo-1605460504109-f347ec557483?w=500&q=75&auto=format&fit=crop",
-            genres="Ambient",
-            description="Aether Bloom crafts ambient soundscapes inspired by nature and deep space.",
+            genres="Electropop",
+            description="A vibrant blend of synth and soul, combining electric rhythms with pop vocals.",
             audio_preview_url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            tags=["synth", "electronic", "groovy"]
         ),
         DNAArtist(
-            name="Nova Pulse",
+            name="EchoVerse",
             image_url="https://images.unsplash.com/photo-1712530967389-e4b5b16b8500?w=500&q=75&auto=format&fit=crop",
-            genres="Electronic, Synth Pop",
-            description="High-energy electronic producer known for futuristic synths and driving beats.",
+            genres="Ambient",
+            description="Soothing textures with evolving soundscapes perfect for background focus.",
             audio_preview_url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            tags=["ambient", "space", "relax"]
         ),
         DNAArtist(
-            name="Echo Sun",
+            name="NeonThrust",
             image_url="https://images.unsplash.com/photo-1635352124191-a387966f7b63?w=500&q=75&auto=format&fit=crop",
-            genres="Lo-Fi, Chillhop",
-            description="Echo Sun blends lo-fi textures with vintage jazz vibes for a relaxing experience.",
+            genres="Synthwave",
+            description="Retro-inspired tracks with heavy analog synth and 80s drums.",
             audio_preview_url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            tags=["retro", "80s", "synthwave"]
         ),
         DNAArtist(
-            name="Velvet Static",
+            name="VelvetPulse",
             image_url="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=500&q=75&auto=format&fit=crop",
-            genres="Synthwave, Retro",
-            description="Retro-futuristic synthwave artist evoking 80s nostalgia and neon dreams.",
+            genres="Lo-fi",
+            description="Warm dusty beats with jazzy chords, perfect for late-night work sessions.",
             audio_preview_url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+            tags=["lofi", "jazzhop", "study"]
         ),
         DNAArtist(
-            name="Crimson Chords",
+            name="GlitchAura",
             image_url="https://images.unsplash.com/photo-1722841772420-4c45e490e283?w=500&q=75&auto=format&fit=crop",
-            genres="Indie Rock, Alternative",
-            description="Raw indie rock energy fused with poetic lyricism and analog warmth.",
+            genres="Experimental",
+            description="Breaks the rules with glitch textures, odd time signatures, and abstract melodies.",
             audio_preview_url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-        ),
+            tags=["glitch", "idm", "avant-garde"]
+        )
     ]
     db.add_all(artists)
     db.commit()
