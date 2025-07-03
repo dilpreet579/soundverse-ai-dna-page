@@ -18,7 +18,7 @@ export default function TopSection() {
                 />
             </div>
             <div>
-                <h1 className="text-3xl md:text-5xl font-light font-grotesk" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>
+                <h1 className="text-2xl md:text-4xl font-light font-grotesk" style={{ fontFamily: 'Power Grotesk', fontWeight: 'normal' }}>
                     BUILD <span className="font-bold font-grotesk   " style={{ fontFamily: 'Power Grotesk', fontWeight: 'bold' }}>DNA</span>
                 </h1>
                 <p className="mt-4 text-gray-400 text-sm md:text-base">

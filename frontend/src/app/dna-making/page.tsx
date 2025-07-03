@@ -1,4 +1,4 @@
-import TopSection from '@/components/TopSection1'
+import TopSection2 from '@/components/dna-making/TopSection2'
 import CTACard from '@/components/CTACard'
 import Sidebar from '@/components/Sidebar'
 
@@ -8,7 +8,7 @@ export default function Home() {
       <div className="flex bg-[#121212] text-white">
         <Sidebar />
         <div className="flex flex-col w-full">
-          <TopSection />
+          <TopSection2 />
           <div className="flex flex-col gap-8 p-4 sm:p-8">
             <CTACard
               title="Verify your creator identity → Unlock your DNA"
