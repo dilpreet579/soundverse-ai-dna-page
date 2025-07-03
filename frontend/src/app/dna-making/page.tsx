@@ -8,9 +8,10 @@ import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivit
 import Step3ProfileCreation from '@/components/dna-making/steps/Step3ProfileCreation';
 import Step4Tagging from '@/components/dna-making/steps/Step4Tagging';
 import Step5Publish from '@/components/dna-making/steps/Step5Publish';
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 export default function Home() {
+    const [currentStep, setCurrentStep] = useState(1);
     const step1Ref = useRef<HTMLDivElement>(null)
     const step2Ref = useRef<HTMLDivElement>(null)
     const step3Ref = useRef<HTMLDivElement>(null)
@@ -18,6 +19,7 @@ export default function Home() {
     const step5Ref = useRef<HTMLDivElement>(null)
 
     const scrollToStep = (step: number) => {
+        setCurrentStep(step);
         const stepRefs = [step1Ref, step2Ref, step3Ref, step4Ref, step5Ref]
         stepRefs[step - 1]?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
