@@ -12,7 +12,7 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="flex flex-col items-center py-6 px-2 bg-black min-h-screen">
+    <aside className="fixed top-0 left-0 z-30 flex flex-col items-center py-6 px-2 bg-black min-h-screen">
       {/* Logo */}
       <Image src="/logo.svg" alt="Logo" width={32} height={32} />
 
