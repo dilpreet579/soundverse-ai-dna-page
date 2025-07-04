@@ -9,7 +9,7 @@ export default function Step5Publish() {
     creatorName: 'Your Name',
     description: 'Your DNA description goes here.',
     tags: ['pop', 'upbeat', '2025'],
-    imageUrl: '/images/avatar.png',
+    imageUrl: 'your-image-url',
   };
 
   const [published, setPublished] = useState(false);
@@ -18,8 +18,18 @@ export default function Step5Publish() {
     // Optionally trigger API call here
   };
 
+  // Type for DNA Artist
+  type DNAArtist = {
+    id: number;
+    name: string;
+    image_url: string;
+    genres: string;
+    description: string;
+    tags: string[];
+    audio_preview_url: string;
+  };
   // Fetch DNA artists from backend
-  const [artists, setArtists] = useState<any[]>([]);
+  const [artists, setArtists] = useState<DNAArtist[]>([]);
   const [loadingArtists, setLoadingArtists] = useState(true);
   const [artistError, setArtistError] = useState('');
 
@@ -28,7 +38,7 @@ export default function Step5Publish() {
   const soundRef = useRef<Howl | null>(null);
 
   // Play/Pause handler
-  const handlePlayPause = (artist: any) => {
+  const handlePlayPause = (artist: DNAArtist) => {
     // Pause if already playing this artist
     if (playingId === artist.id) {
       soundRef.current?.pause();
@@ -73,7 +83,7 @@ export default function Step5Publish() {
 
       {/* Profile Summary Card */}
       <div className="mb-10 max-w-xl mx-auto bg-[#191919] border border-[#333] rounded-2xl p-6 flex flex-col items-center gap-4 shadow">
-        <img src={profile.imageUrl} alt="Profile" className="w-24 h-24 rounded-full object-cover border border-[#444]" />
+        <Image src="/images/avatar.png" alt="Profile" width={100} height={100} className="w-24 h-24 rounded-full object-cover border border-[#444]" />
         <div className="text-xl font-semibold text-white">{profile.creatorName}</div>
         <div className="text-gray-400 text-center">{profile.description}</div>
         <div className="flex gap-2 flex-wrap justify-center">
@@ -120,7 +130,7 @@ export default function Step5Publish() {
             {artists.map(artist => (
               <div key={artist.id} className="bg-[#222] rounded-xl p-4 flex flex-col gap-2 border border-[#333]">
                 <div className="flex items-center gap-4">
-                  <img src={artist.image_url} alt={artist.name} className="w-16 h-16 rounded-full object-cover border border-[#444]" />
+                  <img src={artist.image_url} alt={artist.name} width={100} height={100} className="w-16 h-16 rounded-full object-cover border border-[#444]" />
                   <div>
                     <div className="font-semibold text-base">{artist.name}</div>
                     <div className="text-xs text-gray-400">{artist.genres}</div>

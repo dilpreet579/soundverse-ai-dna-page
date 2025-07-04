@@ -1,7 +1,6 @@
 'use client'
 
 import TopSection2 from '@/components/dna-making/TopSection2'
-import CTACard from '@/components/CTACard'
 import Sidebar from '@/components/Sidebar'
 import Step1UploadAudio from '@/components/dna-making/steps/Step1UploadAudio'
 import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivity'
@@ -11,7 +10,6 @@ import Step5Publish from '@/components/dna-making/steps/Step5Publish';
 import { useRef, useState } from 'react'
 
 export default function Home() {
-    const [currentStep, setCurrentStep] = useState(1);
     const step1Ref = useRef<HTMLDivElement>(null)
     const step2Ref = useRef<HTMLDivElement>(null)
     const step3Ref = useRef<HTMLDivElement>(null)
@@ -19,7 +17,6 @@ export default function Home() {
     const step5Ref = useRef<HTMLDivElement>(null)
 
     const scrollToStep = (step: number) => {
-        setCurrentStep(step);
         const stepRefs = [step1Ref, step2Ref, step3Ref, step4Ref, step5Ref]
         stepRefs[step - 1]?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }

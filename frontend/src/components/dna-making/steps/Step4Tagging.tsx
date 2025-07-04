@@ -25,7 +25,7 @@ export default function Step4Tagging() {
 
           {/* Center Text */}
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 font-bold text-center leading-tight z-7" style={{ fontFamily: 'Power Grotesk', fontWeight: 'bold' }}>
-            <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">WE'RE</span>
+            <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">WE’RE</span>
             <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">BUILDING</span>
             <span className="block text-2xl sm:text-5xl tracking-tight leading-none m-0">YOUR</span>
             <span className="block text-2xl sm:text-5xl font-bold tracking-tight leading-none m-0">DNA</span>

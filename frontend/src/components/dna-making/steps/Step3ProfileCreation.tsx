@@ -131,7 +131,7 @@ export default function Step3ProfileCreation() {
         <div className="flex flex-col items-center justify-start w-full md:w-1/3">
           <div className="relative w-40 h-40 rounded-full border border-[#333] bg-[#121212] flex items-center justify-center">
             {image ? (
-              <img
+              <Image
                 src={URL.createObjectURL(image)}
                 alt="Preview"
                 className="w-full h-full object-cover rounded-full"
