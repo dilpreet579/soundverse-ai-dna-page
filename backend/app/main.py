@@ -11,6 +11,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://soundverse-ai-dna-page.vercel.app/",
 ]
 
 app.add_middleware(
