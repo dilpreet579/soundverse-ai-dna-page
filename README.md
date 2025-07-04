@@ -90,27 +90,24 @@ This project features a modern multi-step creation flow, FastAPI backend, Postgr
 3. Preview suggested DNA artists and play audio with Howler.js.
 4. On Step 5, publish your DNA profile (API integration required for full publish).
 
+
 ## Deployment
 
+Both the frontend and backend are now live!
+
 ### Frontend (Vercel)
-1. Push your code to GitHub.
-2. Go to [vercel.com](https://vercel.com/) and import your repo.
-3. Set the **Root Directory** to `frontend`.
-4. In Vercel dashboard, add the environment variable:
-    - `NEXT_PUBLIC_API_URL` set to your deployed backend URL (from Render)
-5. Deploy. Your site will be live at `https://your-vercel-project.vercel.app`.
+- Deployed at: [https://soundverse-ai-dna-page.vercel.app](https://soundverse-ai-dna-page.vercel.app)
+- Make sure your `.env` file in `frontend` contains:
+  ```env
+  NEXT_PUBLIC_API_URL=https://soundverse-ai-backend.onrender.com
+  ```
 
 ### Backend (Render)
-1. Push your code to GitHub.
-2. Go to [render.com](https://render.com/) and create a new **Web Service**.
-3. Set the **Root Directory** to `backend`.
-4. Build command: `pip install -r requirements.txt`
-5. Start command: `uvicorn app.main:app --host 0.0.0.0 --port 10000`
-6. Add environment variable `DATABASE_URL` with your Render PostgreSQL connection string.
-7. Deploy. Copy your backend URL for use in the frontend.
+- Deployed at: [https://soundverse-ai-backend.onrender.com](https://soundverse-ai-backend.onrender.com)
+- PostgreSQL and all environment variables set in Render dashboard.
 
 ### CORS
-- Make sure your backend CORS settings allow your Vercel domain.
+- The backend CORS settings allow requests from the Vercel frontend domain.
 
 ## Tech Stack
 - **Frontend:** Next.js 14, React 18, Tailwind CSS, Howler.js, TypeScript
