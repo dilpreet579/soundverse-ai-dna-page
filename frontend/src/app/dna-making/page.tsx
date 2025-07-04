@@ -7,7 +7,7 @@ import Step2DnaSensitivity from '@/components/dna-making/steps/Step2DNASenstivit
 import Step3ProfileCreation from '@/components/dna-making/steps/Step3ProfileCreation';
 import Step4Tagging from '@/components/dna-making/steps/Step4Tagging';
 import Step5Publish from '@/components/dna-making/steps/Step5Publish';
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
 export default function Home() {
     const step1Ref = useRef<HTMLDivElement>(null)
