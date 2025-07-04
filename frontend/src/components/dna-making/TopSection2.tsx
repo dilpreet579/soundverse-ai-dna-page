@@ -24,7 +24,7 @@ export default function TopSection2({ onStepClick }: TopSection2Props) {
             {/* Avatar at top right */}
             <div className="absolute top-6 right-10 md:top-8 md:right-20 z-10">
                 <Image
-                    src="/avatar.png"
+                    src="/images/avatar.png"
                     alt="User avatar"
                     width={40}
                     height={40}
